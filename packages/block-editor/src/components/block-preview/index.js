@@ -70,8 +70,8 @@ export function BlockPreviewContent( { name, attributes, innerBlocks, settings, 
 
 	const block = createBlock( name, attributes, innerBlocks );
 	return (
-		<div ref={ previewRef } style={ previewAspect } className="editor-block-preview__container" aria-hidden>
-			<Disabled style={ previewDimensions } className="editor-block-preview__content block-editor-block-preview__content editor-styles-wrapper">
+		<div ref={ previewRef } style={ previewAspect } className="block-editor-block-preview__container" aria-hidden>
+			<Disabled style={ previewDimensions } className="block-editor-block-preview__content editor-styles-wrapper">
 				<BlockEditorProvider
 					value={ [ block ] }
 					settings={ settings }
