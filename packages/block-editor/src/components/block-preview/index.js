@@ -4,12 +4,11 @@
 /**
  * External dependencies
  */
-import React from 'react';
 import { __ } from '@wordpress/i18n';
 import { createBlock } from '@wordpress/blocks';
 import { Disabled } from '@wordpress/components';
 import { withSelect } from '@wordpress/data';
-import { useLayoutEffect, useState } from '@wordpress/element';
+import { useLayoutEffect, useState, createRef } from '@wordpress/element';
 
 /**
  * Internal dependencies
@@ -35,7 +34,7 @@ function BlockPreview( props ) {
 
 export function BlockPreviewContent( { name, attributes, innerBlocks, settings, srcWidth = 400, srcHeight = 300 } = {} ) {
 	// Calculated the destination width.
-	const previewRef = React.createRef();
+	const previewRef = createRef();
 
 	// Fallback dimensions.
 	const [ previewDimensions, setPreviewDimensions ] = useState( {
