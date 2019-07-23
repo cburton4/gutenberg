@@ -66,7 +66,7 @@ export function BlockPreviewContent( { name, attributes, innerBlocks, settings, 
 		setPreviewAspect( {
 			paddingTop: aspectPadding + '%',
 		} );
-	}, [] );
+	}, [ srcWidth, srcHeight ] );
 
 	const block = createBlock( name, attributes, innerBlocks );
 	return (
