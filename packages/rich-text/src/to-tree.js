@@ -74,6 +74,7 @@ const padding = {
 	attributes: {
 		'data-rich-text-padding': 'true',
 	},
+	object: true,
 };
 
 export function toTree( {
