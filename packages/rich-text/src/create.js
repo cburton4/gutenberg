@@ -330,6 +330,7 @@ function createFromElement( {
 
 		if (
 			node.getAttribute( 'data-rich-text-padding' ) ||
+			node.getAttribute( 'data-rich-text-placeholder' ) ||
 			( isEditableTree && type === 'br' && ! node.getAttribute( 'data-rich-text-line-break' ) )
 		) {
 			accumulateSelection( accumulator, node, range, createEmptyValue() );

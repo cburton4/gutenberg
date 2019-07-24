@@ -74,7 +74,6 @@ const padding = {
 	attributes: {
 		'data-rich-text-padding': 'true',
 	},
-	object: true,
 };
 
 export function toTree( {
@@ -91,6 +90,7 @@ export function toTree( {
 	onStartIndex,
 	onEndIndex,
 	isEditableTree,
+	placeholder,
 } ) {
 	const { formats, replacements, text, start, end } = value;
 	const formatsLength = formats.length + 1;
@@ -255,6 +255,15 @@ export function toTree( {
 		}
 
 		if ( shouldInsertPadding && i === text.length ) {
+			if ( placeholder ) {
+				append( getParent( pointer ), {
+					type: 'span',
+					attributes: {
+						'data-rich-text-placeholder': placeholder,
+					},
+				} );
+			}
+
 			append( getParent( pointer ), padding );
 		}
 
