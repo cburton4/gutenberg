@@ -113,6 +113,10 @@ class WritingFlow extends Component {
 	}
 
 	computeCaretRect() {
+		if ( this.props.hasMultiSelection ) {
+			return;
+		}
+
 		this.caretRect = computeCaretRect();
 	}
 
