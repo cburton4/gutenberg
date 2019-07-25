@@ -69,5 +69,5 @@ module.exports = {
 	snapshotSerializers: [
 		'enzyme-to-json/serializer',
 	],
-	reporters: [ 'default', 'jest-junit' ],
+	reporters: [ '<rootDir>/test/travis-fold-passes-reporter.js' ],
 };

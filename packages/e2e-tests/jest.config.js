@@ -12,4 +12,5 @@ module.exports = {
 	testPathIgnorePatterns: [
 		'e2e-tests/specs/performance.test.js',
 	],
+	reporters: [ '<rootDir>/../../test/travis-fold-passes-reporter.js' ],
 };

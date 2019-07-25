@@ -25,4 +25,5 @@ module.exports = {
 		'<rootDir>/.*/build-module/',
 		'<rootDir>/.+\.native\.js$',
 	],
+	reporters: [ '<rootDir>/test/travis-fold-passes-reporter.js' ],
 };
