@@ -252,7 +252,7 @@ function BlockListBlock( {
 		}
 	}, [ isFirstMultiSelected ] );
 
-	const isTyping = useSelect( ( select ) => select( 'core/block-editor' ).isTyping() );
+	const { isTyping } = useSelect( ( select ) => ( { isTyping: select( 'core/block-editor' ).isTyping() } ) );
 	// Block Reordering animation
 	const style = useMovingAnimation( wrapper, isSelected || isPartOfMultiSelection, enableAnimation && ! isTyping, animateOnChange );
 
